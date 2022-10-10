@@ -1,0 +1,35 @@
+# game - Find Fred
+
+print('''
+ \/________________        
+ /     _____________)
+/     /     /   \ |         
+\/\/\/     (O) (O)|           
+  |           ------, 
+  |  _       ______/ 
+  | (_      /   \  \
+  |        /  ___\_ \       
+  |        \      / / 
+__|_________\______/
+\______________\./__\   
+ /     .       | \  |
+ \    /_\   .  |  \ |\     
+ |`\       /_\ |   \| \
+''')
+step1 = input('You are Wilma and you have to save Fred from dinosaurs. Which direction you go? Left or Right? \n').lower()
+if step1 == 'right':
+    step2 = input('You arrived into a cave. Will you go deeper (GO) or stay and shout for Fred (STAY)? \n').lower()
+    if step2 == 'go':
+        step3 = input('What\'s your plan now? Will you walk slowly by foot (WALK), run (RUN) or will you get the boat you saw floating nearby (BOAT)? \n').lower()
+        if step3 == 'walk':
+            print("Congrats! You found Fred just at the corner, laying down surrounded by beer bottles.")
+        elif step3 == 'run':
+            print("Why the rush?! You stumbled into a rock and broke your leg. You'll never find Fred this way.")
+        elif step3 == 'boat':
+            print("Game over! The boat was a trap and you can't swim.")
+        else:
+            print("Game over. You didn't choose one of the options we provided for you.")
+    else:
+        print('Game over! You wasted all your time.')
+else:
+    print('Game over! You were eaten by a dinosaur.')
